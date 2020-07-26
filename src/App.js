@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from "react";
+import { getJobsData } from "./components/request";
+import styles from "./app.module.css";
+import Card from "./components/card";
+class App extends Component {
+  state = {
+    jobs: [],
+  };
+  async componentDidMount() {
+    const data = await getJobsData();
+    this.setState({ jobs: data });
+  }
+  render() {
+    const { jobs } = this.state;
+    return (
+      <div className={styles.container}>
+        {jobs.map((job) => (
+          <Card key={job.id} job={job} />
+        ))}
+      </div>
+    );
+  }
 }
 
 export default App;
