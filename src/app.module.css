@@ -10,5 +10,28 @@
   height: 100%;
   margin: 0;
   padding: 3% 4%;
+  overflow-x: hidden;
   box-sizing: border-box;
+  font-family: "Montserrat";
+  background: #87bbff;
+}
+.jobnumber {
+  text-align: center;
+  color: aliceblue;
+  margin: 20px;
+}
+.loadmore {
+  width: 140px;
+  background-color: rgb(255, 10, 31);
+  font-family: "Montserrat";
+  padding: 10px 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  margin: 10px auto 0 auto;
+  bottom: 0;
+  color: #fff;
+}
+.loadmore i {
+  margin-left: 5px;
 }

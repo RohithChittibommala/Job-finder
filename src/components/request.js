@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export const getJobsData = async () => {
+export const getJobsData = async (number = 0) => {
   const { data } = await axios.get(
-    "https://jobs.github.com/positions.json?description=java&page=2"
+    `https://jobs.github.com/positions.json?description=backend&page=${number}`
   );
   return data;
 };

@@ -6,8 +6,22 @@
   display: flex;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
-  height: 400px;
+  justify-content: center;
+  height: auto;
+  background-color: #6486bd;
+  padding: 3%;
+  border-radius: 18px;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: 500ms;
+  overflow: scroll;
 }
+.card:hover {
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.02);
+}
+
 .card .jobheader {
   display: flex;
   position: relative;
@@ -18,8 +32,6 @@
 .jobheader .title {
   display: flex;
   flex-direction: column;
-  /* align-content: center
-  ; */
   justify-items: center;
   font-size: 18px;
 }
@@ -33,6 +45,62 @@
   width: 100%;
 }
 .title i {
-  color: blue;
+  color: rgb(42, 209, 42);
   margin-right: 10px;
+}
+.link {
+  position: relative;
+}
+.title h1 {
+  text-transform: capitalize;
+  /* font-family: "Montserrat", sans-serif; */
+}
+.title p span {
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-right: 5px;
+}
+p {
+  margin-bottom: 5px;
+  transition: 200ms;
+}
+.body p span {
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-right: 5px;
+}
+p.link a {
+  margin-left: 24px;
+}
+.body a {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  text-transform: capitalize;
+  color: #fff;
+  margin: 10px 0px;
+  width: 120px;
+  padding: 5px;
+  background-color: #27bace;
+  transition: 200ms all;
+}
+.body a:hover {
+  transform: scale(0.9);
+  background-color: #0e63ec;
+}
+.readmore a {
+  background-color: #50a854;
+}
+.readmore a:hover {
+  transform: scale(0.9);
+  background-color: #034407;
+}
+.apply {
+  background-color: rgb(122, 49, 49);
+  width: 100px;
+  text-align: center;
+  padding: 6px;
+  color: #fff;
+  border-radius: 8px;
 }
