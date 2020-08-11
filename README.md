@@ -1,4 +1,4 @@
-This Job finder app shows the jobs by search tag
+This app was build using React.js 
 
-app fetches data from github api 
+App fetches data from github api 
 
